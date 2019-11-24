@@ -1,3 +1,5 @@
+package Obiektowosc;
+
 public class Human {
     private Integer age;
     private String name;
@@ -5,7 +7,7 @@ public class Human {
     private Integer birthYear;
 
     //Kostruktor- wywolywany jest przy inicjalizacji obiektu
-    Human (String name, String surname, Integer birthYear) {
+     public Human (String name, String surname, Integer birthYear) {
         this.name = name;
         this.surname = surname;
         this.birthYear = birthYear;
@@ -33,5 +35,10 @@ public class Human {
     public void setBirthYear (Integer birthYear) {
         this.birthYear= birthYear;
         this.age = this.obliczWiek();
+    }
+    //Static -pozwala dostac sie do funkcji bez inicjalizacji oboektu
+    // nie mozemy operowac w niej na zadych atrybutach niestatycznych
+    public static void opiszKlase(){
+         System.out.println( "klasa human oblcza ");
     }
 }
